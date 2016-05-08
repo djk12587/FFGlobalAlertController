@@ -37,6 +37,7 @@
 
 - (void)show:(BOOL)animated {
     self.alertWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.alertWindow.tintColor = [UIApplication sharedApplication].delegate.window.tintColor;
     self.alertWindow.rootViewController = [[UIViewController alloc] init];
     self.alertWindow.windowLevel = UIWindowLevelAlert + 1;
     [self.alertWindow makeKeyAndVisible];
